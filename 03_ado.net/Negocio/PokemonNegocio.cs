@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using Dominio;
+using negocio;
 
-namespace winform_app
+namespace negocio
 {
-    class PokemonNegocio
+    public class PokemonNegocio
     {
         public List<Pokemon> listar()
         {
@@ -20,7 +22,7 @@ namespace winform_app
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Numero, Nombre, Descripcion, urlImagen From POKEMONS";
+                comando.CommandText = "Select Numero, Nombre, P.Descripcion, urlImagen, E.Descripcion As Tipo, D.Descripcion As Debilidad From Pokemons P, Elementos E, Elementos D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -33,6 +35,10 @@ namespace winform_app
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.urlImagen = (string)lector["urlImagen"];
+                    aux.Tipo = new Elemento();
+                    aux.Tipo.Descripcion = (string)lector["Tipo"];
+                    aux.Debilidad = new Elemento();
+                    aux.Debilidad.Descripcion = (string)lector["Debilidad"];
 
                     lista.Add(aux);
                 }

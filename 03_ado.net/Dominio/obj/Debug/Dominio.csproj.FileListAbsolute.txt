@@ -1,0 +1,6 @@
+E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\bin\Debug\Dominio.dll
+E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\bin\Debug\Dominio.pdb
+E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.dll
+E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.pdb
