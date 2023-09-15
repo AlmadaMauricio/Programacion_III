@@ -35,7 +35,10 @@ namespace negocio
                     aux.Numero = (int)lector["Numero"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.urlImagen = (string)lector["urlImagen"];
+                    if (!(lector["UrlImagen"] is DBNull))
+                    {
+                        aux.urlImagen = (string)lector["urlImagen"];
+                    }
                     aux.Tipo = new Elemento();
                     aux.Tipo.Descripcion = (string)lector["Tipo"];
                     aux.Debilidad = new Elemento();
@@ -59,7 +62,9 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Insert Into POKEMONS (Numero, Nombre, Descripcion, Activo) Values(" + agregarPokemon.Numero + ", '" + agregarPokemon.Nombre + "', '" + agregarPokemon.Descripcion + "', 1)");
+                datos.setearConsulta("Insert Into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad) Values(" + agregarPokemon.Numero + ", '" + agregarPokemon.Nombre + "', '" + agregarPokemon.Descripcion + "', 1, @idTipo, @idDebilidad)");
+                datos.setearParametro("@idTipo", agregarPokemon.Tipo.id);
+                datos.setearParametro("@idDebilidad", agregarPokemon.Debilidad.id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
