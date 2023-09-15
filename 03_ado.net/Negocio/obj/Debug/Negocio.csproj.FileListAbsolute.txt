@@ -7,3 +7,12 @@ E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-ne
 E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Negocio\obj\Debug\Negocio.dll
 E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\bin\Debug\Negocio.dll
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\bin\Debug\Dominio.dll
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\obj\Debug\Negocio.dll
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Negocio\obj\Debug\Negocio.pdb

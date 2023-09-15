@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
 using negocio;
+using Negocio;
 
 namespace negocio
 {
@@ -54,7 +55,22 @@ namespace negocio
 
         public void agregar(Pokemon agregarPokemon)
         {
+            AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                datos.setearConsulta("Insert Into POKEMONS (Numero, Nombre, Descripcion, Activo) Values(" + agregarPokemon.Numero + ", '" + agregarPokemon.Nombre + "', '" + agregarPokemon.Descripcion + "', 1)");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
         public void modificar(Pokemon modificarPokemon)

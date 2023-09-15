@@ -4,3 +4,9 @@ E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-ne
 E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.dll
 E:\mauri\UTN-Clases\2023\2° Cuat - 2023\Progra_III\c#_07_adoNet\Ejemplos-ado-net\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Dominio\bin\Debug\Dominio.dll
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Dominio\obj\Debug\Dominio.dll
+C:\Users\Mauricio\Documents\GitHub_repos\Programacion_III\03_ado.net\Dominio\obj\Debug\Dominio.pdb
