@@ -23,7 +23,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Numero, Nombre, P.Descripcion, urlImagen, E.Descripcion As Tipo, D.Descripcion As Debilidad From Pokemons P, Elementos E, Elementos D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad";
+                comando.CommandText = "Select Numero, Nombre, P.Descripcion, urlImagen, E.Descripcion As Tipo, D.Descripcion As Debilidad, P.IdTipo, P.IdDebilidad, P.Id From Pokemons P, Elementos E, Elementos D Where E.Id = P.IdTipo And D.Id = P.IdDebilidad";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -32,6 +32,7 @@ namespace negocio
                 while (lector.Read()) 
                 {
                     Pokemon aux = new Pokemon();
+                    aux.Id = (int)lector["Id"];
                     aux.Numero = (int)lector["Numero"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
@@ -40,8 +41,10 @@ namespace negocio
                         aux.urlImagen = (string)lector["urlImagen"];
                     }
                     aux.Tipo = new Elemento();
+                    aux.Tipo.id = (int)lector["IdTipo"];
                     aux.Tipo.Descripcion = (string)lector["Tipo"];
                     aux.Debilidad = new Elemento();
+                    aux.Debilidad.id = (int)lector["IdDebilidad"];
                     aux.Debilidad.Descripcion = (string)lector["Debilidad"];
 
                     lista.Add(aux);
@@ -62,9 +65,10 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Insert Into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad) Values(" + agregarPokemon.Numero + ", '" + agregarPokemon.Nombre + "', '" + agregarPokemon.Descripcion + "', 1, @idTipo, @idDebilidad)");
+                datos.setearConsulta("Insert Into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen) Values(" + agregarPokemon.Numero + ", '" + agregarPokemon.Nombre + "', '" + agregarPokemon.Descripcion + "', 1, @idTipo, @idDebilidad, @UrlImagen)");
                 datos.setearParametro("@idTipo", agregarPokemon.Tipo.id);
                 datos.setearParametro("@idDebilidad", agregarPokemon.Debilidad.id);
+                datos.setearParametro("@UrlImagen", agregarPokemon.urlImagen);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -80,7 +84,28 @@ namespace negocio
 
         public void modificar(Pokemon modificarPokemon)
         {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Update POKEMONS Set Numero = @Numero, Nombre = @Nombre, Descripcion = @Descripcion, UrlImagen = @Imagen, IdTipo = @IdTipo, IdDebilidad = @IdDebilidad Where Id = @Id");
+                datos.setearParametro("@Numero", modificarPokemon.Numero);
+                datos.setearParametro("@Nombre", modificarPokemon.Nombre);
+                datos.setearParametro("@Descripcion", modificarPokemon.Descripcion);
+                datos.setearParametro("@Imagen", modificarPokemon.urlImagen);
+                datos.setearParametro("@IdTipo", modificarPokemon.Tipo.id);
+                datos.setearParametro("@IdDebilidad", modificarPokemon.Debilidad.id);
+                datos.setearParametro("@Id", modificarPokemon.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }
